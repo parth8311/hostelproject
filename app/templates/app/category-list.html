@@ -1,0 +1,112 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+        <main class="main">
+        	<div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
+        		<div class="container">
+        			<h1 class="page-title">List<span>House</span></h1>
+        		</div><!-- End .container -->
+        	</div><!-- End .page-header -->
+            <nav aria-label="breadcrumb" class="breadcrumb-nav mb-2">
+                <div class="container">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Shop</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">House</li>
+                    </ol>
+                </div><!-- End .container -->
+            </nav><!-- End .breadcrumb-nav -->
+
+            <div class="page-content">
+                <div class="container">
+                	<div class="row">
+                		<div class="col-lg-9">
+                			<div class="toolbox">
+                				<div class="toolbox-left">
+                				<!-- End .toolbox-info -->
+                				</div><!-- End .toolbox-left -->
+
+                				<div class="toolbox-right">
+                					<!-- End .toolbox-layout -->
+                				</div><!-- End .toolbox-right -->
+                			</div><!-- End .toolbox -->
+
+							{% if all %}
+                    
+							{% for i in all %}
+						
+                            <div class="products mb-3">
+                                <div class="product product-list">
+                                   
+                                    <div class="row">
+                                        <div class="col-6 col-lg-3">
+                                            <figure class="product-media">
+                                                <span class="product-label label-new">New</span>
+                                                <a href="product.html">
+                                                    <img src="{{MEDIA_URL}}{{i.Image.url}}" alt="Image 1">
+                                                </a>
+                                            </figure><!-- End .product-media -->
+                                        </div><!-- End .col-sm-6 col-lg-3 -->
+
+                                        <div class="col-6 col-lg-3 order-lg-last">
+                                            <div class="product-list-action">
+                                                <div class="product-price">
+                                                    {{i.Rent}}
+                                                </div><!-- End .product-price -->
+                                               
+                                            </div><!-- End .product-list-action -->
+                                        </div><!-- End .col-sm-6 col-lg-3 -->
+
+                                        <div class="col-lg-6">
+                                            <div class="product-body product-action-inner">
+                                                <div class="product-cat">
+                                                    <a href="#">{{i.Gender}}</a>
+                                                </div><!-- End .product-cat -->
+                                                <h3 class="product-title"><a href="{% url 'housedetails' pk=i.id %}">{{i.Roomno}}</a></h3><!-- End .product-title -->
+
+                                                <div class="product-content">
+                                                    <p>{{i.Address}}<br>{{i.City}} </p>
+                                                </div><!-- End .product-content -->
+                                                
+                                                <div class="product-nav product-nav-thumbs">
+                                                    <a href="#">
+                                                        <img src="{{MEDIA_URL}}{{i.Image1.url}}" alt="Image 2">
+                                                    </a>
+
+                                                    <a href="#">
+                                                        <img src="{{MEDIA_URL}}{{i.Image2.url}}" alt="Image 3">
+                                                    </a>
+                                                </div><!-- End .product-nav -->
+                                            </div><!-- End .product-body -->
+                                        </div><!-- End .col-lg-6 -->
+
+                                     </div><!-- End .row -->
+                                </div><!-- End .product -->
+
+                              </div><!-- End .products -->
+							  {% endfor %}
+							  {% endif %}
+							
+
+                		                		</div><!-- End .col-lg-9 -->
+                		
+                	</div><!-- End .row -->
+                </div><!-- End .container -->
+            </div><!-- End .page-content -->
+        </main><!-- End .main -->
+
+          </div><!-- End .page-wrapper -->
+    <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
+
+    <!-- Mobile Menu -->
+  
+    <!-- Plugins JS File -->
+</body>
+
+
+<!-- molla/category-list.html  22 Nov 2019 10:02:52 GMT -->
+</html>
+{% endblock content %}

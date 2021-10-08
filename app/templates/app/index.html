@@ -1,0 +1,792 @@
+
+
+
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- molla/index-1.html  22 Nov 2019 09:55:06 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BookMyPG</title>
+    <meta name="keywords" content="HTML5 Template">
+    <meta name="description" content="Molla - Bootstrap eCommerce Template">
+    <meta name="author" content="p-themes">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static '/assets/images/icons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static '/assets/images/icons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static '/assets/images/icons/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static '/assets/images/icons/site.html' %}">
+    <link rel="mask-icon" href="{% static '/assets/images/icons/safari-pinned-tab.svg' %}" color="#666666">
+    <link rel="shortcut icon" href="{% static '/assets/images/icons/favicon.ico' %}">
+    <meta name="apple-mobile-web-app-title" content="Molla">
+    <meta name="application-name" content="Molla">
+    <meta name="msapplication-TileColor" content="#cc9966">
+    <meta name="msapplication-config" content="{% static '/assets/images/icons/browserconfig.xml' %}">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="{% static '/assets/vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css' %}">
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" href="{% static '/assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/css/plugins/owl-carousel/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/css/plugins/magnific-popup/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/css/plugins/jquery.countdown.css' %}">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="{% static '/assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/css/skins/skin-demo-2.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/css/demos/demo-2.css' %}">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header class="header header-2 header-intro-clearance">
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-left">
+                       
+                    </div><!-- End .header-left -->
+
+                    <div class="header-right">
+
+                                           </div><!-- End .header-right -->
+
+                </div><!-- End .container -->
+            </div><!-- End .header-top -->
+
+            <div class="header-middle">
+                <div class="container">
+                    <div class="header-left">
+                        <button class="mobile-menu-toggler">
+                
+                            <i class="icon-bars"></i>
+                        </button>
+                        
+                        <a href="index.html" class="logo">
+                            <h1>BookMyPG</h1>
+                        </a>
+                    </div><!-- End .header-left -->
+
+                    <div class="header-center">
+                        <div class="header-search header-search-extended header-search-visible header-search-no-radius d-none d-lg-block">
+                            <a href="#" class="search-toggle" role="button"><i class="icon-search"></i></a>
+                           
+                        </div><!-- End .header-search -->
+                    </div>
+
+                    <div class="header-right">
+                        <ul class="top-menu">
+                            <li>
+                                <a href="#">Links</a>
+                                <ul>
+                                    <li><a href="{% url 'loginpage' %}" >Sign in / Sign up</a></li>
+                                </ul>
+                            </li>
+                        </ul><!-- End .top-menu -->
+
+                       <!-- End .cart-dropdown -->
+                    </div><!-- End .header-right -->
+                </div><!-- End .container -->
+            </div><!-- End .header-middle -->
+
+            <div class="header-bottom sticky-header">
+                <div class="container">
+                    <div class="header-left">
+                        <div class="dropdown category-dropdown">
+                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static" title="Browse Categories">
+                                Browse Categories
+                            </a>
+
+                            <div class="dropdown-menu">
+                                <nav class="side-nav">
+                                    <ul class="menu-vertical sf-arrows">
+                                        <li class="item-lead"><a href="{% url 'opencategory1' name='1 Room' %}">1 Rooms</a></li>
+                                                                <li class="item-lead"><a href="{% url 'opencategory1' name='1BHK' %}">1 BHK</a></li>
+                                                                <li class="item-lead"><a href="{% url 'opencategory1' name='2BHK' %}">2 BHK</a></li>
+                                                                <li class="item-lead"><a href="{% url 'opencategory1' name='3BHK' %}">3 BHK</a></li>
+                                                                <li class="item-lead"><a href="{% url 'opencategory1' name='4BHK' %}">4 BHK</a></li>
+                                                            
+                                    </ul><!-- End .menu-vertical -->
+                                </nav><!-- End .side-nav -->
+                            </div><!-- End .dropdown-menu -->
+                        </div><!-- End .category-dropdown -->
+                    </div><!-- End .header-left -->
+
+                    <div class="header-center">
+                        <nav class="main-nav">
+                            <ul class="menu sf-arrows">
+                            
+                                    <a href="index.html" class="sf-with-ul">Home</a>
+
+                                    <div class="megamenu demo">
+                                        <div class="menu-col">
+                                            
+                                            <div class="demo-list">
+                                                <div class="demo-item">
+                                                    
+                                                </div><!-- End .demo-item -->
+
+                                                <div class="demo-item">
+                                                    
+                                                </div><!-- End .demo-item -->
+
+                                               
+                                            </div><!-- End .demo-list -->
+
+                                           <!-- End .text-center -->
+                                        </div><!-- End .menu-col -->
+                                    </div><!-- End .megamenu -->
+                                
+                                <li>
+                                    <a href="category.html" class="sf-with-ul">Filters</a>
+
+                                    <div class="megamenu megamenu-md">
+                                        <div class="row no-gutters">
+                                            <div class="col-md-8">
+                                                <div class="menu-col">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="menu-title">Filter By Price</div><!-- End .menu-title -->
+                                                          <ul>
+                                                                <li><a href="{% url 'OpenCategoryprice1' price='4000' %}">Low Price</a></li>
+                                                                <li><a href="{% url 'OpenCategoryprice1' price='15000' %}">Medium Price</a></li>
+                                                                <li><a href="{% url 'OpenCategoryprice1' price='25000' %}">High Price</a></li>
+                                                                
+                                                            </ul>
+
+                                                            <div class="menu-title">Filter By Location</div><!-- End .menu-title -->
+                                                            <ul>
+                                                                <li><a href="{% url 'OpenCategorylocation1' name='Ahmedabad' %}"><span>Ahmedabad<span class="tip tip-hot">Hot</span></span></a></li>
+                                                                <li><a href="{% url 'OpenCategorylocation1' name='Gandhinagar' %}">Gandhinagar</a></li>
+                                                                <li><a href="{% url 'OpenCategorylocation1' name='Surat' %}"><span>Surat<span class="tip tip-hot">Hot</span></span></a></li>
+                                                                <li><a href="{% url 'OpenCategorylocation1' name='Baroda' %}">Baroda</a></li>
+                   
+                                                                <li><a href="{% url 'OpenCategorylocation1' name='Rajkot' %}"><span>Rajkot<span class="tip tip-hot">Hot</span></span></a></li>
+                                                        
+                   
+                                                            </ul>
+                                                        </div><!-- End .col-md-6 -->
+                                                        <div class="col-md-6">
+                                                            
+                                                        </div><!-- End .col-md-6 -->
+                                                    </div><!-- End .row -->
+                                                </div><!-- End .menu-col -->
+                                            </div><!-- End .col-md-8 -->
+
+                                                                                </div><!-- End .row -->
+                                    </div><!-- End .megamenu megamenu-md -->
+                                </li>
+                                <li>
+                                    <a href="#" class="sf-with-ul">Pages</a>
+
+                                    <ul>
+                                        <li><a href="{% url 'loginpage' %}">Login</a></li>
+                                       
+                                    </ul>
+                                </li>
+                                                           </ul><!-- End .menu -->
+                        </nav><!-- End .main-nav -->
+                    </div><!-- End .header-center -->
+
+                  </div><!-- End .container -->
+            </div><!-- End .header-bottom -->
+        </header><!-- End .header -->
+
+    
+
+
+
+    <!-- Plugins JS File -->
+    <script src="{% static '/assets/js/jquery.min.js' %}"></script>
+    <script src="{% static '/assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.hoverIntent.min.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static '/assets/js/superfish.min.js' %}"></script>
+    <script src="{% static '/assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.plugin.min.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.countdown.min.js' %}"></script>
+    <!-- Main JS File -->
+    <script src="{% static '/assets/js/main.js' %}"></script>
+    <script src="{% static '/assets/js/demos/demo-2.js' %}"></script>
+
+</body>
+
+<!-- Mirrored from koki.dexignzone.com/xhtml/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Dec 2020 08:29:18 GMT -->
+</html>
+
+
+
+
+
+        <main class="main">
+            <div class="intro-slider-container">
+                <div class="owl-carousel owl-simple owl-light owl-nav-inside" data-toggle="owl" data-owl-options='{"nav": false}'>
+                    <div class="intro-slide">
+                        <img src="{% static '/assets/images/1.jpg' %}" alt="Brand Name" width="200" height="100">
+                        <div class="container intro-content">
+                            <img src="{% static '/assets/images/1-1.jpg' %}" alt="Brand Name" width="140" height="100">
+                       
+                            
+                        </div><!-- End .container intro-content -->
+                    </div><!-- End .intro-slide -->
+
+                    <div class="intro-slide" >
+                        <img src="{% static '/assets/images/2.jpg' %}" alt="Brand Name" width="200" height="50">
+                       
+                        <div class="container intro-content">
+                            <img src="{% static '/assets/images/2-1.jpg' %}" alt="Brand Name" width="140" height="100">
+                       
+                        </div><!-- End .container intro-content -->
+                    </div><!-- End .intro-slide -->
+
+                    <div class="intro-slide">
+                        <img src="{% static '/assets/images/3.jpg' %}" alt="Brand Name" width="140" height="80">
+                       
+                        <div class="container intro-content">
+                            <img src="{% static '/assets/images/3-1.jpg' %}" alt="Brand Name" width="140" height="100">
+                       
+                        
+                                
+                            </a>
+                        </div><!-- End .container intro-content -->
+                    </div><!-- End .intro-slide -->
+                </div><!-- End .owl-carousel owl-simple -->
+
+                <span class="slider-loader text-white"></span><!-- End .slider-loader -->
+            </div><!-- End .intro-slider-container -->
+
+              
+            <div class="mb-3 mb-lg-5"></div><!-- End .mb-3 mb-lg-5 -->
+
+           
+            <div class="mb-3"></div><!-- End .mb-6 -->
+
+            <div class="container">
+                <ul class="nav nav-pills nav-border-anim nav-big justify-content-center mb-3" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="products-featured-link" data-toggle="tab" href="#products-featured-tab" role="tab" aria-controls="products-featured-tab" aria-selected="true">Featured</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="products-top-link" data-toggle="tab" href="#products-top-tab" role="tab" aria-controls="products-top-tab" aria-selected="false">Top Rated</a>
+                    </li>
+                </ul>
+            </div><!-- End .container -->
+
+            <div class="container-fluid">
+                <div class="tab-content tab-content-carousel">
+                    <div class="tab-pane p-0 fade show active" id="products-featured-tab" role="tabpanel" aria-labelledby="products-featured-link">
+                        <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                            data-owl-options='{
+                                "nav": false, 
+                                "dots": true,
+                                "margin": 20,
+                                "loop": false,
+                                "responsive": {
+                                    "0": {
+                                        "items":2
+                                    },
+                                    "480": {
+                                        "items":2
+                                    },
+                                    "768": {
+                                        "items":3
+                                    },
+                                    "992": {
+                                        "items":4
+                                    },
+                                    "1200": {
+                                        "items":5
+                                    },
+                                    "1600": {
+                                        "items":6,
+                                        "nav": true
+                                    }
+                                }
+                            }'>
+                            <div class="product product-11 text-center">
+                                <figure class="product-media">
+                                    <a href="{% url 'opencategory1' name='2BHK' %}">
+                                        <img src="{% static '/assets/images/products/6.jpg' %}" alt="Product image" class="product-image">
+                                        <img src="{% static '/assets/images/products/6-1.jpg' %}" alt="Product image" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="{% url 'opencategory1' name='2BHK' %}" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
+                                    </div><!-- End .product-action-vertical -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <h3 class="product-title"><a href="{% url 'opencategory1' name='2BHK' %}"> 2 BHK</a></h3><!-- End .product-title -->
+                                    <div class="product-price">
+                                        14,000
+                                    </div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                                                           </div><!-- End .product -->
+
+                            <div class="product product-11 text-center">
+                                <figure class="product-media">
+                                    <a href="{% url 'opencategory1' name='1 Room' %}">
+                                        <img src="{% static '/assets/images/products/5.jpg' %}" alt="Product image" class="product-image">
+                                        <img src="{% static '/assets/images/products/5-1.jpg' %}" alt="Product image" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="{% url 'opencategory1' name='1 Room' %}" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
+                                    </div><!-- End .product-action-vertical -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <h3 class="product-title"><a href="{% url 'opencategory1' name='1 Room' %}">1 Room</a></h3><!-- End .product-title -->
+                                    <div class="product-price">
+                                        4000
+                                    </div><!-- End .product-price -->
+
+                                      </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+
+                            <div class="product product-11 text-center">
+                                <figure class="product-media">
+                                    <span class="product-label label-circle label-new">New</span>
+                                    <a href="{% url 'opencategory1' name='1BHK' %}">
+                                        <img src="{% static '/assets/images/products/15.jpg' %}" alt="Product image" class="product-image">
+                                        <img src="{% static '/assets/images/products/15-1.jpeg' %}" alt="Product image" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="{% url 'opencategory1' name='1BHK' %}" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <h3 class="product-title"><a href="{% url 'opencategory1' name='1BHK' %}">1BHK</a></h3><!-- End .product-title -->
+                                    <div class="product-price">
+                                        20000
+                                    </div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                    
+                            </div><!-- End .product -->
+
+                            <div class="product product-11 text-center">
+                                <figure class="product-media">
+                                    <a href="{% url 'opencategory1' name='3BHK' %}">
+                                        <img src="{% static '/assets/images/products/14.jpg' %}" alt="Product image" class="product-image">
+                                        <img src="{% static '/assets/images/products/14-1.jpg' %}" alt="Product image" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="{% url 'opencategory1' name='3BHK' %}" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <h3 class="product-title"><a href="{% url 'opencategory1' name='3BHK' %}">3BHK</a></h3><!-- End .product-title -->
+                                    <div class="product-price">
+                                        <span class="new-price">22000</span>
+                                    
+                                    </div><!-- End .product-price -->
+
+                                                                  </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+
+                            <div class="product product-11 text-center">
+                                <figure class="product-media">
+                                    <a href="{% url 'opencategory1' name='4BHK' %}">
+                                        <img src="{% static '/assets/images/products/12.jpeg' %}" alt="Product image" class="product-image">
+                                        <img src="{% static '/assets/images/products/12-1.jpg' %}" alt="Product image" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="{% url 'opencategory1' name='4BHK' %}" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <h3 class="product-title"><a href="{% url 'opencategory1' name='4BHK' %}">4BHK</a></h3><!-- End .product-title -->
+                                    <div class="product-price">
+                                        26000
+                                    </div><!-- End .product-price -->
+
+                                   
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+
+                          
+                          
+                        </div><!-- End .owl-carousel -->
+                    </div><!-- .End .tab-pane -->
+                    <div class="tab-pane p-0 fade" id="products-top-tab" role="tabpanel" aria-labelledby="products-top-link">
+                        <div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow" data-toggle="owl" 
+                            data-owl-options='{
+                                "nav": false, 
+                                "dots": true,
+                                "margin": 20,
+                                "loop": false,
+                                "responsive": {
+                                    "0": {
+                                        "items":2
+                                    },
+                                    "480": {
+                                        "items":2
+                                    },
+                                    "768": {
+                                        "items":3
+                                    },
+                                    "992": {
+                                        "items":4
+                                    },
+                                    "1200": {
+                                        "items":5
+                                    },
+                                    "1600": {
+                                        "items":6,
+                                        "nav": true
+                                    }
+                                }
+                            }'>
+                            <div class="product product-11 text-center">
+                                <figure class="product-media">
+                                    <a href="{% url 'opencategory1' name='Low Price' %}">
+                                        <img src="{% static '/assets/images/products/11.jpeg' %}" alt="Product image" class="product-image">
+                                        <img src="{% static '/assets/images/products/11-1.jpg' %}" alt="Product image" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="{% url 'opencategory1' name='Low Price' %}" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
+                                    </div><!-- End .product-action-vertical -->
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <h3 class="product-title"><a href="{% url 'opencategory1' name='Low Price' %}">Low Price</a></h3><!-- End .product-title -->
+                                    <div class="product-price">
+                                        Rent : 3000
+                                    </div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+
+                            <div class="product product-11 text-center">
+                                <figure class="product-media">
+                                    <span class="product-label label-circle label-new">New</span>
+                                    <a href="{% url 'opencategory1' name='Medium Price' %}">
+                                        <img src="{% static '/assets/images/products/6.jpg' %}" alt="Product image" class="product-image">
+                                        <img src="{% static '/assets/images/products/6-1.jpg' %}" alt="Product image" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="{% url 'opencategory1' name='Medium Price' %}" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <h3 class="product-title"><a href="{% url 'opencategory1' name='Medium Price' %}">Medium Price</a></h3><!-- End .product-title -->
+                                    <div class="product-price">
+                                        Rent : 14000
+                                    </div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+
+                            <div class="product product-11 text-center">
+                                <figure class="product-media">
+                                    <a href="{% url 'opencategory1' name='High Price' %}">
+                                        <img src="{% static '/assets/images/products/1.jpg' %}" alt="Product image" class="product-image">
+                                        <img src="{% static '/assets/images/products/1-1.jpg' %}" alt="Product image" class="product-image-hover">
+                                    </a>
+
+                                    <div class="product-action-vertical">
+                                        <a href="{% url 'opencategory1' name='High Price' %}" class="btn-product-icon btn-wishlist"><span>add to wishlist</span></a>
+                                    </div><!-- End .product-action-vertical -->
+
+                                </figure><!-- End .product-media -->
+
+                                <div class="product-body">
+                                    <h3 class="product-title"><a href="{% url 'opencategory1' name='High Price' %}">High Price</a></h3><!-- End .product-title -->
+                                    <div class="product-price">
+                                       Rent : 35000
+                                    </div><!-- End .product-price -->
+                                </div><!-- End .product-body -->
+                            </div><!-- End .product -->
+                        </div><!-- End .owl-carousel -->
+                    </div><!-- .End .tab-pane -->
+                </div><!-- End .tab-content -->
+            </div><!-- End .container-fluid -->
+
+            <div class="mb-5"></div><!-- End .mb-5 -->
+
+           
+            <div class="mb-6"></div><!-- End .mb-6 -->
+
+            <div class="container">
+                <div class="heading heading-center mb-3">
+                    <h2 class="title">Top Selling Houses</h2><!-- End .title -->
+
+                    <ul class="nav nav-pills nav-border-anim justify-content-center" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="top-all-link" data-toggle="tab" href="#top-all-tab" role="tab" aria-controls="top-all-tab" aria-selected="true">All</a>
+                        </li>
+                                          </ul>
+                </div><!-- End .heading -->
+
+                <div class="tab-content">
+                    <div class="tab-pane p-0 fade show active" id="top-all-tab" role="tabpanel" aria-labelledby="top-all-link">
+                        <div class="products">
+                            <div class="row justify-content-center">
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
+                                    <div class="product product-11 text-center">
+                                        <figure class="product-media">
+                                            <a href="{% url 'OpenCategorylocation1' name='Ahmedabad' %}">
+                                                <img src="{% static '/assets/images/products/10.jpeg' %}" alt="Product image" class="product-image">
+                                                <img src="{% static '/assets/images/products/10-1.jpg' %}" alt="Product image" class="product-image-hover">
+                                            </a>
+
+                                            <div class="product-action-vertical">
+                                                <a href="{% url 'OpenCategorylocation1' name='Ahmedabad' %}" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                            </div><!-- End .product-action-vertical -->
+                                        </figure><!-- End .product-media -->
+
+                                        <div class="product-body">
+                                            <h3 class="product-title"><a href="{% url 'OpenCategorylocation1' name='Ahmedabad' %}">Ahmedabad</a></h3><!-- End .product-title -->
+                                            <div class="product-price">
+                                              Rent :  9000
+                                            </div><!-- End .product-price -->
+                                        </div><!-- End .product-body -->
+                                    </div><!-- End .product -->
+                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
+                                    <div class="product product-11 text-center">
+                                        <figure class="product-media">
+                                            <a href="{% url 'OpenCategorylocation1' name='Rajkot' %}">
+                                                <img src="{% static '/assets/images/products/7.jpeg' %}" alt="Product image" class="product-image">
+                                                <img src="{% static '/assets/images/products/7-1.jpg' %}" alt="Product image" class="product-image-hover">
+                                            </a>
+
+                                            <div class="product-action-vertical">
+                                                <a href="{% url 'OpenCategorylocation1' name='Rajkot' %}" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                            </div><!-- End .product-action-vertical -->
+                                        </figure><!-- End .product-media -->
+
+                                        <div class="product-body">
+                                            <h3 class="product-title"><a href="{% url 'OpenCategorylocation1' name='Rajkot' %}">Rajkot</a></h3><!-- End .product-title -->
+                                            <div class="product-price">
+                                                Rent : 23000
+                                            </div><!-- End .product-price -->
+                                        </div><!-- End .product-body -->
+                                    </div><!-- End .product -->
+                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
+                                    <div class="product product-11 text-center">
+                                        <figure class="product-media">
+                                            <a href="{% url 'OpenCategorylocation1' name='Porbandar' %}">
+                                                <img src="{% static '/assets/images/products/9.jpg' %}" alt="Product image" class="product-image">
+                                                <img src="{% static '/assets/images/products/9-1.jpg' %}" alt="Product image" class="product-image-hover">
+                                            </a>
+
+                                            <div class="product-action-vertical">
+                                                <a href="{% url 'OpenCategorylocation1' name='Porbandar' %}" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                            </div><!-- End .product-action-vertical -->
+                                        </figure><!-- End .product-media -->
+
+                                        <div class="product-body">
+                                            <h3 class="product-title"><a href="{% url 'OpenCategorylocation1' name='Porbandar' %}">Porbandar</a></h3><!-- End .product-title -->
+                                            <div class="product-price">
+                                                Rent : 12000
+                                            </div><!-- End .product-price -->
+                                        </div><!-- End .product-body -->
+                                    </div><!-- End .product -->
+                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
+                                    <div class="product product-11 text-center">
+                                        <figure class="product-media">
+                                            <a href="{% url 'OpenCategorylocation1' name='Vadodara' %}">
+                                                <img src="{% static '/assets/images/products/2.jpg' %}" alt="Product image" class="product-image">
+                                                <img src="{% static '/assets/images/products/2-1.jpg' %}" alt="Product image" class="product-image-hover">
+                                            </a>
+
+                                            <div class="product-action-vertical">
+                                                <a href="{% url 'OpenCategorylocation1' name='Vadodara' %}" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                            </div><!-- End .product-action-vertical -->
+                                        </figure><!-- End .product-media -->
+
+                                        <div class="product-body">
+                                            <h3 class="product-title"><a href="{% url 'OpenCategorylocation1' name='Vadodara' %}">Baroda</a></h3><!-- End .product-title -->
+                                            <div class="product-price">
+                                               Rent : 25000
+                                            </div><!-- End .product-price -->
+                                        </div><!-- End .product-body -->
+                                    </div><!-- End .product -->
+                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
+                                    <div class="product product-11 text-center">
+                                        <figure class="product-media">
+                                            <a href="{% url 'OpenCategorylocation1' name='Bharuch' %}">
+                                                <img src="{% static '/assets/images/products/3.jpg' %}" alt="Product image" class="product-image">
+                                                <img src="{% static '/assets/images/products/3-1.jpg' %}" alt="Product image" class="product-image-hover">
+                                            </a>
+
+                                            <div class="product-action-vertical">
+                                                <a href="{% url 'OpenCategorylocation1' name='Bharuch' %}" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                            </div><!-- End .product-action-vertical -->
+                                        </figure><!-- End .product-media -->
+
+                                        <div class="product-body">
+                                            <h3 class="product-title"><a href="{% url 'OpenCategorylocation1' name='Bharuch' %}">Bharuch</a></h3><!-- End .product-title -->
+                                            <div class="product-price">
+                                              Rent : 18000
+                                            </div><!-- End .product-price -->
+                                        </div><!-- End .product-body -->
+                                    </div><!-- End .product -->
+                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
+                                    <div class="product product-11 text-center">
+                                        <figure class="product-media">
+                                            <a href="{% url 'OpenCategorylocation1' name='1BHK' %}">
+                                                <img src="{% static '/assets/images/products/16.jpg' %}" height="200" width="300" alt="Product image" class="product-image">
+                                                <img src="{% static '/assets/images/products/16-1.jpg' %}" height="200" width="300" alt="Product image" class="product-image-hover">
+                                            </a>
+
+                                            <div class="product-action-vertical">
+                                                <a href="{% url 'OpenCategorylocation1' name='1BHK' %}" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                            </div><!-- End .product-action-vertical -->
+                                        </figure><!-- End .product-media -->
+
+                                        <div class="product-body">
+                                            <h3 class="product-title"><a href="{% url 'OpenCategorylocation1' name='1BHK' %}">1BHK</a></h3><!-- End .product-title -->
+                                            <div class="product-price">
+                                               Rent : 7000
+                                            </div><!-- End .product-price -->
+                                        </div><!-- End .product-body -->
+                                    </div><!-- End .product -->
+                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
+                                    <div class="product product-11 text-center">
+                                        <figure class="product-media">
+                                            <a href="{% url 'OpenCategorylocation1' name='Veraval' %}">
+                                                <img src="{% static '/assets/images/products/1.jpg' %}" alt="Product image" class="product-image">
+                                                <img src="{% static '/assets/images/products/1-1.jpg' %}" alt="Product image" class="product-image-hover">
+                                            </a>
+
+                                            <div class="product-action-vertical">
+                                                <a href="{% url 'OpenCategorylocation1' name='Veraval' %}" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                            </div><!-- End .product-action-vertical -->
+                                        </figure><!-- End .product-media -->
+
+                                        <div class="product-body">
+                                            <h3 class="product-title"><a href="{% url 'OpenCategorylocation1' name='Veraval' %}">Veraval</a></h3><!-- End .product-title -->
+                                            <div class="product-price">
+                                                Rent : 35000
+                                            </div><!-- End .product-price -->
+                                        </div><!-- End .product-body -->
+                                    </div><!-- End .product -->
+                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
+                                    <div class="product product-11 text-center">
+                                        <figure class="product-media">
+                                            <a href="{% url 'OpenCategorylocation1' name='1 Room' %}">
+                                                <img src="{% static '/assets/images/products/17.jpg' %}" alt="Product image" class="product-image">
+                                                <img src="{% static '/assets/images/products/17-1.jpg' %}" alt="Product image" class="product-image-hover">
+                                            </a>
+
+                                            <div class="product-action-vertical">
+                                                <a href="{% url 'OpenCategorylocation1' name='1 Room' %}" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                            </div><!-- End .product-action-vertical -->
+                                        </figure><!-- End .product-media -->
+
+                                        <div class="product-body">
+                                            <h3 class="product-title"><a href="{% url 'OpenCategorylocation1' name='1 Room' %}">1 Room</a></h3><!-- End .product-title -->
+                                            <div class="product-price">
+                                               Rent : 15000
+                                            </div><!-- End .product-price -->
+                                        </div><!-- End .product-body -->
+                                    </div><!-- End .product -->
+                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-5col">
+                                    <div class="product product-11 text-center">
+                                        <figure class="product-media">
+                                            <a href="{% url 'OpenCategorylocation1' name='Morbi' %}">
+                                                <img src="{% static '/assets/images/products/11.jpeg' %}" alt="Product image" class="product-image">
+                                                <img src="{% static '/assets/images/products/11-1.jpg' %}" alt="Product image" class="product-image-hover">
+                                            </a>
+
+                                            <div class="product-action-vertical">
+                                                <a href="{% url 'OpenCategorylocation1' name='Morbi' %}" class="btn-product-icon btn-wishlist "><span>add to wishlist</span></a>
+                                            </div><!-- End .product-action-vertical -->
+                                        </figure><!-- End .product-media -->
+
+                                        <div class="product-body">
+                                            <h3 class="product-title"><a href="{% url 'OpenCategorylocation1' name='Morbi' %}">Morbi</a></h3><!-- End .product-title -->
+                                            <div class="product-price">
+                                                Rent : 3000
+                                            </div><!-- End .product-price -->
+                                        </div><!-- End .product-body -->
+                                    </div><!-- End .product -->
+                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+
+                               
+                                </div><!-- End .col-sm-6 col-md-4 col-lg-3 -->
+                            </div><!-- End .row -->
+                        </div><!-- End .products -->
+                    </div><!-- .End .tab-pane -->
+
+            <div class="container">
+                <hr class="mt-1 mb-6">
+            </div><!-- End .container -->
+            
+          
+        </main><!-- End .main -->
+
+        <footer class="footer footer-2">
+            <div class="icon-boxes-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="icon-box icon-box-side">
+                                <span class="icon-box-icon text-dark">
+                                    <i class="icon-rocket"></i>
+                                </span>
+                                <div class="icon-box-content">
+                                    <h3 class="icon-box-title">Best Service</h3><!-- End .icon-box-title -->
+                                
+                                </div><!-- End .icon-box-content -->
+                            </div><!-- End .icon-box -->
+                        </div><!-- End .col-sm-6 col-lg-3 -->
+
+                       
+                       
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="icon-box icon-box-side">
+                                <span class="icon-box-icon text-dark">
+                                    <i class="icon-life-ring"></i>
+                                </span>
+
+                                <div class="icon-box-content">
+                                    <h3 class="icon-box-title">We Support</h3><!-- End .icon-box-title -->
+                                    <p>24/7 amazing services</p>
+                                </div><!-- End .icon-box-content -->
+                            </div><!-- End .icon-box -->
+                        </div><!-- End .col-sm-6 col-lg-3 -->
+                    </div><!-- End .row -->
+                </div><!-- End .container -->
+            </div><!-- End .icon-boxes-container -->
+
+        	
+        	
+    
+</body>
+
+
+<!-- molla/index-1.html  22 Nov 2019 09:55:32 GMT -->
+</html>

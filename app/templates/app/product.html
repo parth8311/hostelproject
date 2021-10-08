@@ -1,0 +1,152 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block content %}
+        <main class="main">
+            <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
+                <div class="container d-flex align-items-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                       
+                    </ol>
+
+                  
+                </div><!-- End .container -->
+            </nav><!-- End .breadcrumb-nav -->
+
+            <div class="page-content">
+                <div class="container">
+                    <div class="product-details-top">
+                        <div class="row">
+                            <div class="col-md-6">
+                                {% if key2 %}
+                                <div class="product-gallery product-gallery-vertical">
+                                    <div class="row">
+                                        <figure class="product-main-image">
+                                            <img src="{{MEDIA_URL}}{{key2.Image.url}}" alt="Image 1">
+
+                                            <a href="#" id="btn-product-gallery" class="btn-product-gallery">
+                                                <i class="icon-arrows"></i>
+                                            </a>
+                                        </figure><!-- End .product-main-image -->
+
+                                        <div id="product-zoom-gallery" class="product-image-gallery">
+                                            <a class="product-gallery-item active" href="#" data-image="assets/images/products/single/1.jpg" data-zoom-image="{{MEDIA_URL}}{{key2.Image.url}}">
+                                                <img src="{{MEDIA_URL}}{{key2.Image.url}}" alt="Image 1">
+                                            </a>
+
+                                            <a class="product-gallery-item" href="#" data-image="assets/images/products/single/2.jpg" data-zoom-image="{{MEDIA_URL}}{{key2.Image1.url}}">
+                                                <img src="{{MEDIA_URL}}{{key2.Image1.url}}" alt="Image 1">
+                                            </a>
+
+                                            <a class="product-gallery-item" href="#" data-image="assets/images/products/single/3.jpg" data-zoom-image="{{MEDIA_URL}}{{key2.Image2.url}}">
+                                                <img src="{{MEDIA_URL}}{{key2.Image2.url}}" alt="Image 1">
+                                            </a>
+
+                                           
+                                        </div><!-- End .product-image-gallery -->
+                                    </div><!-- End .row -->
+                                </div><!-- End .product-gallery -->
+                            </div><!-- End .col-md-6 -->
+
+                            <div class="col-md-6">
+                                <div class="product-details">
+                                    <h1 class="product-title">{{key2.Roomno}}</h1><!-- End .product-title -->
+
+                                    <div class="ratings-container">
+                                        <div class="ratings">
+                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
+                                        </div><!-- End .ratings -->
+                                        <a class="ratings-text" href="#product-review-link" id="review-link">( 2 Reviews )</a>
+                                    </div><!-- End .rating-container -->
+
+                                    <div class="product-price">
+                                        {{key2.Rent}}
+                                    </div><!-- End .product-price -->
+
+                                    <div class="product-content">
+                                        <p>{{key2.Address}} </p>
+                                        <p>{{key2.City}}</p>
+                                        <p>{{key2.State}}</p>
+                                    </div><!-- End .product-content -->
+
+                                    <div class="details-filter-row details-row-size">
+                                        <label>Gender:</label>
+                                        <p>{{key2.Gender}}</p>
+
+                                       <!-- End .product-nav -->
+                                    </div><!-- End .details-filter-row -->
+
+                                    <div class="details-filter-row details-row-size">
+                                        <label>Food Status:</label>
+                                        <p>{{key2.Food}}</p>
+
+                                       <!-- End .product-nav -->
+                                    </div><!-- End .details-filter-row -->
+
+                                    <div class="details-filter-row details-row-size">
+                                        <label>Ac Status:</label>
+                                        <p>{{key2.AC}}</p>
+
+                                       <!-- End .product-nav -->
+                                    </div><!-- End .details-filter-row -->
+
+                                    <div class="details-filter-row details-row-size">
+                                        <label>Speciality:</label> 
+                                        <p>{{key2.Speciality}}</p>
+
+                                       <!-- End .product-nav -->
+                                    </div><!-- End .details-filter-row -->
+
+
+                                    <form action="{% url 'addtocart' pk=request.session.id %}" method="POST"></for>
+                                        {% csrf_token %}
+                                        <input type="hidden" name="id" value="{{key2.id}}">  
+                                        <input type="hidden" name="address" value="{{key2.Address}}">  
+                                        <input type="hidden" name="rent" value="{{key2.Rent}}">  
+                                        <input type="hidden" name="roomno" value="{{key2.Roomno}}">  
+                                        <input type="hidden" name="image" value="{{key2.Image}}">  
+                                        
+                                      
+                                    <div class="product-details-action">
+                                     <Button type="submit">   <a href="#" class="btn-product btn-cart"><span>Add to Wishlist</span></a></Button>
+                                     </div>
+                                     </form>
+
+                                        <div class="details-action-wrapper">
+                                             </div><!-- End .details-action-wrapper -->
+                                        {% endif %}
+                                    </div><!-- End .product-details-action -->
+
+                                  <!-- End .product-details-footer -->
+                                </div><!-- End .product-details -->
+                            </div><!-- End .col-md-6 -->
+                        </div><!-- End .row -->
+                    </div><!-- End .product-details-top -->
+
+                                </div><!-- End .reviews -->
+                            </div><!-- .End .tab-pane -->
+                        </div><!-- End .tab-content -->
+                    </div><!-- End .product-details-tab -->
+
+                 
+    <!-- Plugins JS File -->
+    <script src="{% static '/assets/js/jquery.min.js' %}"></script>
+    <script src="{% static '/assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.hoverIntent.min.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static '/assets/js/superfish.min.js' %}"></script>
+    <script src="{% static '/assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static '/assets/js/bootstrap-input-spinner.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.elevateZoom.min.js' %}"></script>
+    <script src="{% static '/assets/js/bootstrap-input-spinner.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <!-- Main JS File -->
+    <script src="{% static '/assets/js/main.js' %}"></script>
+</body>
+
+
+<!-- molla/product.html  22 Nov 2019 09:55:05 GMT -->
+</html>
+{% endblock content %}

@@ -1,0 +1,438 @@
+
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- molla/index-1.html  22 Nov 2019 09:55:06 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BookMyPG</title>
+    <meta name="keywords" content="HTML5 Template">
+    <meta name="description" content="Molla - Bootstrap eCommerce Template">
+    <meta name="author" content="p-themes">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static '/assets/images/icons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static '/assets/images/icons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static '/assets/images/icons/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static '/assets/images/icons/site.html' %}">
+    <link rel="mask-icon" href="{% static '/assets/images/icons/safari-pinned-tab.svg' %}" color="#666666">
+    <link rel="shortcut icon" href="{% static '/assets/images/icons/favicon.ico' %}">
+    <meta name="apple-mobile-web-app-title" content="Molla">
+    <meta name="application-name" content="Molla">
+    <meta name="msapplication-TileColor" content="#cc9966">
+    <meta name="msapplication-config" content="{% static '/assets/images/icons/browserconfig.xml' %}">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="{% static '/assets/vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css' %}">
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" href="{% static '/assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/css/plugins/owl-carousel/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/css/plugins/magnific-popup/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/css/plugins/jquery.countdown.css' %}">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="{% static '/assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/css/skins/skin-demo-2.css' %}">
+    <link rel="stylesheet" href="{% static '/assets/css/demos/demo-2.css' %}">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header class="header header-2 header-intro-clearance">
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-left">
+                
+                    </div><!-- End .header-left -->
+
+                    <div class="header-right">
+
+                        <ul class="top-menu">
+                            <li>
+                
+                                <ul>
+                                    <li>
+                                        <div class="header-dropdown">
+                                        
+                                            <div class="header-menu">
+                                                
+                                            </div><!-- End .header-menu -->
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="header-dropdown">
+                                        
+                                            <div class="header-menu">
+                                                
+                                            </div><!-- End .header-menu -->
+                                        </div>
+                                    </li>
+                                    <li><a href="{% url 'loginpage' %}" >Sign in / Sign up</a></li>
+                                </ul>
+                            </li>
+                        </ul><!-- End .top-menu -->
+                    </div><!-- End .header-right -->
+
+                </div><!-- End .container -->
+            </div><!-- End .header-top -->
+
+            <div class="header-middle">
+                <div class="container">
+                    <div class="header-left">
+                        <button class="mobile-menu-toggler">
+                            <span class="sr-only">Toggle mobile menu</span>
+                            <i class="icon-bars"></i>
+                        </button>
+                        
+                        <a href="index.html" class="logo">
+                            <h1>BookMyPG</h1>
+                        </a>
+                    </div><!-- End .header-left -->
+
+                    <div class="header-center">
+                        <div class="header-search header-search-extended header-search-visible header-search-no-radius d-none d-lg-block">
+                            <a href="#" class="search-toggle" role="button"><i class="icon-search"></i></a>
+                           </div><!-- End .header-search -->
+                    </div>
+
+                    <div class="header-right">
+                        <div class="account">
+                            <a href="{% url 'loginpage' %}" title="My account">
+                                <div class="icon">
+                                    <i class="icon-user"></i>
+                                </div>
+                                <p></p>
+                             
+
+                            </a>
+                        </div><!-- End .compare-dropdown -->
+                    
+                         <div class="account">
+                                <a href="" >
+                                    <div class="icon">
+                                        <i class="icon-user"></i>
+                                    </div>
+                                    <p>Log Out</p>
+                               
+                                </a>
+                            </div><!-- End .compare-dropdown -->
+    
+
+                        <div class="wishlist">
+                            <a href="{% url 'loginpage' %}" title="Wishlist">
+                                <div class="icon">
+                                    <i class="icon-heart-o"></i>
+                                    <span class="wishlist-count badge">3</span>
+                                </div>
+                                <p>Wishlist</p>
+                            </a>
+                        </div><!-- End .compare-dropdown -->
+
+                       <!-- End .cart-dropdown -->
+                    </div><!-- End .header-right -->
+                </div><!-- End .container -->
+            </div><!-- End .header-middle -->
+
+            <div class="header-bottom sticky-header">
+                <div class="container">
+                    <div class="header-left">
+                        <div class="dropdown category-dropdown">
+                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static" title="Browse Categories">
+                                Browse Categories
+                            </a>
+
+                            <div class="dropdown-menu">
+                                <nav class="side-nav">
+                                    <ul class="menu-vertical sf-arrows">
+                                        <li class="item-lead"><a href="{% url 'opencategory' name='1 Room' %}">1 Rooms</a></li>
+                                                                <li class="item-lead"><a href="{% url 'opencategory' name='1BHK' %}">1 BHK</a></li>
+                                                                <li class="item-lead"><a href="{% url 'opencategory' name='2BHK' %}">2 BHK</a></li>
+                                                                <li class="item-lead"><a href="{% url 'opencategory' name='3BHK' %}">3 BHK</a></li>
+                                                                <li class="item-lead"><a href="{% url 'opencategory' name='4BHK' %}">4 BHK</a></li>
+                                                            
+                                    </ul><!-- End .menu-vertical -->
+                                </nav><!-- End .side-nav -->
+                            </div><!-- End .dropdown-menu -->
+                        </div><!-- End .category-dropdown -->
+                    </div><!-- End .header-left -->
+
+                    <div class="header-center">
+                        <nav class="main-nav">
+                            <ul class="menu sf-arrows">
+                            
+                                    <a href="index.html" class="sf-with-ul">Home</a>
+
+                                    <div class="megamenu demo">
+                                        <div class="menu-col">
+                                            
+                                            <div class="demo-list">
+                                                <div class="demo-item">
+                                                    
+                                                </div><!-- End .demo-item -->
+
+                                                <div class="demo-item">
+                                                    
+                                                </div><!-- End .demo-item -->
+
+                                               
+                                            </div><!-- End .demo-list -->
+
+                                           <!-- End .text-center -->
+                                        </div><!-- End .menu-col -->
+                                    </div><!-- End .megamenu -->
+                                
+                                <li>
+                                    <a href="category.html" class="sf-with-ul">Filters</a>
+
+                                    <div class="megamenu megamenu-md">
+                                        <div class="row no-gutters">
+                                            <div class="col-md-8">
+                                                <div class="menu-col">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="menu-title">Filter By Price</div><!-- End .menu-title -->
+                                                          <ul>
+                                                                <li><a href="{% url 'OpenCategoryprice1' price='4000' %}">Low Price</a></li>
+                                                                <li><a href="{% url 'OpenCategoryprice1' price='15000' %}">Medium Price</a></li>
+                                                                <li><a href="{% url 'OpenCategoryprice1' price='25000' %}">High Price</a></li>
+                                                                
+                                                            </ul>
+
+                                                            <div class="menu-title">Filter By Location</div><!-- End .menu-title -->
+                                                            <ul>
+                                                                <li><a href="{% url 'OpenCategorylocation1' name='Ahmedabad' %}"><span>Ahmedabad<span class="tip tip-hot">Hot</span></span></a></li>
+                                                                <li><a href="{% url 'OpenCategorylocation1' name='Gandhinagar' %}">Gandhinagar</a></li>
+                                                                <li><a href="{% url 'OpenCategorylocation1' name='Surat' %}"><span>Surat<span class="tip tip-hot">Hot</span></span></a></li>
+                                                                <li><a href="{% url 'OpenCategorylocation1' name='Baroda' %}">Baroda</a></li>
+                   
+                                                                <li><a href="{% url 'OpenCategorylocation1' name='Rajkot' %}"><span>Rajkot<span class="tip tip-hot">Hot</span></span></a></li>
+                                                        
+                   
+                                                            </ul>
+                                                        </div><!-- End .col-md-6 -->
+
+                                                        <div class="col-md-6">
+                                                            
+                                                        </div><!-- End .col-md-6 -->
+                                                    </div><!-- End .row -->
+                                                </div><!-- End .menu-col -->
+                                            </div><!-- End .col-md-8 -->
+
+                                            <div class="col-md-4">
+                                                <div class="banner banner-overlay">
+                                                    <a href="category.html" class="banner banner-menu">
+                                                        <img src="{% static '/assets/images/menu/banner-1.jpg' %}" alt="Banner">
+
+                                                        <div class="banner-content banner-content-top">
+                                                            <div class="banner-title text-white">Last <br>Chance<br><span><strong>Sale</strong></span></div><!-- End .banner-title -->
+                                                        </div><!-- End .banner-content -->
+                                                    </a>
+                                                </div><!-- End .banner banner-overlay -->
+                                            </div><!-- End .col-md-4 -->
+                                        </div><!-- End .row -->
+                                    </div><!-- End .megamenu megamenu-md -->
+                                </li>
+                                <li>
+                                    <a href="#" class="sf-with-ul">Pages</a>
+
+                                    <ul>
+                                        <li>
+                                            <a href="about.html" class="sf-with-ul">About</a>
+
+                                            <ul>
+                                                <li><a href="about.html">About 01</a></li>
+                                                <li><a href="about-2.html">About 02</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="contact.html" class="sf-with-ul">Contact</a>
+
+                                            <ul>
+                                                <li><a href="contact.html">Contact 01</a></li>
+                                                <li><a href="contact-2.html">Contact 02</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="login.html">Login</a></li>
+                                        <li><a href="faq.html">FAQs</a></li>
+                                        <li><a href="404.html">Error 404</a></li>
+                                        <li><a href="coming-soon.html">Coming Soon</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="elements-list.html" class="sf-with-ul">Elements</a>
+
+                                    <ul>
+                                        <li><a href="elements-products.html">Products</a></li>
+                                        <li><a href="elements-typography.html">Typography</a></li>
+                                        <li><a href="elements-titles.html">Titles</a></li>
+                                        <li><a href="elements-banners.html">Banners</a></li>
+                                        <li><a href="elements-product-category.html">Product Category</a></li>
+                                        <li><a href="elements-video-banners.html">Video Banners</a></li>
+                                        <li><a href="elements-buttons.html">Buttons</a></li>
+                                        <li><a href="elements-accordions.html">Accordions</a></li>
+                                        <li><a href="elements-tabs.html">Tabs</a></li>
+                                        <li><a href="elements-testimonials.html">Testimonials</a></li>
+                                        <li><a href="elements-blog-posts.html">Blog Posts</a></li>
+                                        <li><a href="elements-portfolio.html">Portfolio</a></li>
+                                        <li><a href="elements-cta.html">Call to Action</a></li>
+                                        <li><a href="elements-icon-boxes.html">Icon Boxes</a></li>
+                                    </ul>
+                                </li>
+                            </ul><!-- End .menu -->
+                        </nav><!-- End .main-nav -->
+                    </div><!-- End .header-center -->
+
+                                  </div><!-- End .container -->
+            </div><!-- End .header-bottom -->
+        </header><!-- End .header -->
+
+        <main class="main">
+            <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
+                <div class="container d-flex align-items-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Products</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Default</li>
+                    </ol>
+
+                    <nav class="product-pager ml-auto" aria-label="Product">
+                        <a class="product-pager-link product-pager-prev" href="#" aria-label="Previous" tabindex="-1">
+                            <i class="icon-angle-left"></i>
+                            <span>Prev</span>
+                        </a>
+
+                        <a class="product-pager-link product-pager-next" href="#" aria-label="Next" tabindex="-1">
+                            <span>Next</span>
+                            <i class="icon-angle-right"></i>
+                        </a>
+                    </nav><!-- End .pager-nav -->
+                </div><!-- End .container -->
+            </nav><!-- End .breadcrumb-nav -->
+
+            <div class="page-content">
+                <div class="container">
+                    <div class="product-details-top">
+                        <div class="row">
+                            <div class="col-md-6">
+                                {% if key2 %}
+                                <div class="product-gallery product-gallery-vertical">
+                                    <div class="row">
+                                        <figure class="product-main-image">
+                                            <img src="{{MEDIA_URL}}{{key2.Image.url}}" alt="Image 1" >
+
+                                            <a href="#" id="btn-product-gallery" class="btn-product-gallery">
+                                                <i class="icon-arrows"></i>
+                                            </a>
+                                        </figure><!-- End .product-main-image -->
+
+                                        <div id="product-zoom-gallery" class="product-image-gallery">
+                                            <a class="product-gallery-item active" href="#" data-image="{{MEDIA_URL}}{{key2.Image.url}}" data-zoom-image="{{MEDIA_URL}}{{key2.Image.url}}">
+                                                <img src="{{MEDIA_URL}}{{key2.Image.url}}" alt="Image 1">
+                                            </a>
+
+                                            <a class="product-gallery-item" href="#" data-image="{{MEDIA_URL}}{{key2.Image1.url}}" data-zoom-image="{{MEDIA_URL}}{{key2.Image1.url}}">
+                                                <img src="{{MEDIA_URL}}{{key2.Image1.url}}" alt="Image 1" >
+                                            </a>
+
+                                            <a class="product-gallery-item" href="#" data-image="{{MEDIA_URL}}{{key2.Image2.url}}" data-zoom-image="{{MEDIA_URL}}{{key2.Image2.url}}">
+                                                <img src="{{MEDIA_URL}}{{key2.Image2.url}}" alt="Image 1">
+                                            </a>
+
+                                           
+                                        </div><!-- End .product-image-gallery -->
+                                    </div><!-- End .row -->
+                                </div><!-- End .product-gallery -->
+                            </div><!-- End .col-md-6 -->
+
+                            <div class="col-md-6">
+                                <div class="product-details">
+                                    <h1 class="product-title">{{key2.Roomno}}</h1><!-- End .product-title -->
+
+                                    <div class="ratings-container">
+                                        <div class="ratings">
+                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
+                                        </div><!-- End .ratings -->
+                                        <a class="ratings-text" href="#product-review-link" id="review-link">( 2 Reviews )</a>
+                                    </div><!-- End .rating-container -->
+
+                                    <div class="product-price">
+                                        {{key2.Rent}}
+                                    </div><!-- End .product-price -->
+
+                                    <div class="product-content">
+                                        <p>{{key2.Address}} </p>
+                                        <p>{{key2.City}}</p>
+                                        <p>{{key2.State}}</p>
+                                    </div><!-- End .product-content -->
+
+                                    <div class="details-filter-row details-row-size">
+                                        <label>Gender:</label>
+                                        <p>{{key2.Gender}}</p>
+
+                                       <!-- End .product-nav -->
+                                    </div><!-- End .details-filter-row -->
+
+                                    <div class="details-filter-row details-row-size">
+                                        <label>Food Status:</label>
+                                        <p>{{key2.Food}}</p>
+
+                                       <!-- End .product-nav -->
+                                    </div><!-- End .details-filter-row -->
+
+                                    <div class="details-filter-row details-row-size">
+                                        <label>Ac Status:</label>
+                                        <p>{{key2.AC}}</p>
+
+                                       <!-- End .product-nav -->
+                                    </div><!-- End .details-filter-row -->
+
+                                    <div class="details-filter-row details-row-size">
+                                        <label>Speciality:</label> 
+                                        <p>{{key2.Speciality}}</p>
+
+                                       <!-- End .product-nav -->
+                                    </div><!-- End .details-filter-row -->
+
+
+                                    <form action="{% url 'loginpage' %}" method="POST"></for>
+                                        {% csrf_token %}
+                                       
+                                    <div class="product-details-action">
+                                     <Button type="submit">   <a href="#" class="btn-product btn-cart"><span>Login For add House in Wishlist</span></a></Button>
+                                     </div>
+                                     </form>
+
+                                        <div class="details-action-wrapper">
+                                             </div><!-- End .details-action-wrapper -->
+                                        {% endif %}
+                                    </div><!-- End .product-details-action -->
+
+                                  <!-- End .product-details-footer -->
+                                </div><!-- End .product-details -->
+                            </div><!-- End .col-md-6 -->
+                        </div><!-- End .row -->
+                    </div><!-- End .product-details-top -->
+
+                 
+       <!-- Plugins JS File -->
+    <script src="{% static '/assets/js/jquery.min.js' %}"></script>
+    <script src="{% static '/assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.hoverIntent.min.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static '/assets/js/superfish.min.js' %}"></script>
+    <script src="{% static '/assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static '/assets/js/bootstrap-input-spinner.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.elevateZoom.min.js' %}"></script>
+    <script src="{% static '/assets/js/bootstrap-input-spinner.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <!-- Main JS File -->
+    <script src="{% static '/assets/js/main.js' %}"></script>
+</body>
+
+
+<!-- molla/product.html  22 Nov 2019 09:55:05 GMT -->
+</html>

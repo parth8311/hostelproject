@@ -1,0 +1,215 @@
+{% extends 'owner/base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<!-- Mirrored from koki.dexignzone.com/xhtml/form-validation-jquery.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Dec 2020 08:30:13 GMT -->
+
+        
+        
+        
+        <!--************
+            Content body start
+        *************-->
+        <div class="content-body">
+            <div class="container-fluid">
+                <div class="row page-titles mx-0">
+                    <div class="col-sm-6 p-md-0">
+                        <div class="welcome-text">
+                            <h4>Hi, welcome back!</h4>
+        
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">House Details</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-validation">
+                                    <form class="form-valide" action="{% url 'addhouse' pk=request.session.id %}" method="post" enctype="multipart/form-data"> 
+                                        {% csrf_token %}
+                                        {% if msg %}
+                                            <p class="text-danger text-center">{{msg}}</p>
+                                        {% endif %}
+
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" >Address
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control"  name="address" placeholder="Enter Address..">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" >State
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control"  name="state" placeholder="Enter State Name">
+                                                    </div>
+                                                
+                                                </div><div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" >Image
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="file" class="form-control"  name="image" placeholder="Upload a image">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" >Image1
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="file" class="form-control"  name="image1" placeholder="Upload a image1">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" >Image2
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="file" class="form-control"  name="image2" placeholder="Upload a image2">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" >Roomno
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="search-selectpicker selectpicker-wrapper">
+                                                        <select
+                                                            class="selectpicker input-price" data-live-search="true" data-width="100%"
+                                                            data-toggle="tooltip"  name="roomno">
+                                                            <option value="1 Room">1 Room</option>
+                                                            <option value="1BHK">1BHK</option>
+                                                            <option value="2BHK">2BHK</option>
+                                                            <option value="3BHK">3BHK</option>
+                                                            <option value="4BHK">4BHK</option> 
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" >Rent
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control"  name="rent" placeholder="Enter Rent/1 Year">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" >AC
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="search-selectpicker selectpicker-wrapper">
+                                                        <select
+                                                            class="selectpicker input-price" data-live-search="true" data-width="100%"
+                                                            data-toggle="tooltip"  name="ac">
+                                                            <option value="Ac">Ac</option>
+                                                            <option value="NonAc">NonAc</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" >City
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="search-selectpicker selectpicker-wrapper">
+                                                        <select
+                                                            class="selectpicker input-price" data-live-search="true" data-width="100%"
+                                                            data-toggle="tooltip"  name="city">
+                                                            <option value="Ahmedabad">Ahmedabad</option>
+                                                            <option value="Surat">Surat</option>
+                                                            <option value="Vadodara">vadodara</option>
+                                                            <option value="Rajkot">Rajkot</option>
+                                                            <option value="Gandhinagar">Gandhinagar</option>
+                                                            <option value="Jamnagar">Jamnagar</option>
+                                                            <option value="Junagadh">Junagadh</option>
+                                                            <option value="Bhavnagar">Bhavnagar</option>
+                                                            <option value="Gandhidham">Gandhidham</option>
+                                                            <option value="Porbandar">Porbandar</option>
+                                                            <option value="Vapi">Vapi</option>
+                                                            <option value="Bharuch">Bharuch</option>
+                                                            <option value="Navsari">Navsari</option>
+                                                            <option value="Patan">Patan</option>
+                                                            <option value="Veraval">Veraval</option>
+                                                            <option value="Anand">Anand</option>
+                                                            <option value="Nadiad">Nadiad</option>
+                                                            <option value="Morbi">Morbi</option>
+                                                            <option value="Dahod">Dahod</option>
+                                                            <option value="Palanpur">Palanpur</option>
+                                                            <option value="Botad">Botad</option> 
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" >Gender
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="search-selectpicker selectpicker-wrapper">
+                                                        <select
+                                                            class="selectpicker input-price" data-live-search="true" data-width="100%"
+                                                            data-toggle="tooltip"  name="gender">
+                                                            <option value="For Only Boys">For Only Boys</option>
+                                                            <option value="For Only Girls">For Only Girls</option>
+                                                            <option value="For Both">For Both</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" >
+                                                        <span class="text-danger">*</span>Speciality
+                                                    </label>
+                                                    <div class="col-lg-6">
+                                                        <input type="text" class="form-control"  name="speciality" placeholder="Enter Speciality">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label class="col-lg-4 col-form-label" >Food
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+                                                    <div class="search-selectpicker selectpicker-wrapper">
+                                                        <select
+                                                            class="selectpicker input-price" data-live-search="true" data-width="100%"
+                                                            data-toggle="tooltip"  name="food">
+                                                            <option value="With Food">With Food</option>
+                                                            <option value="Without Food">Without Food</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>                                               
+                                         </div>
+                                        </div>
+                                    
+                                                <div class="form-group row">
+                                                        <div class="col-lg-8 ml-auto">
+                                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!--************
+            Content body end
+        *************-->
+
+
+{% endblock %}
